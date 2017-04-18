@@ -112,5 +112,18 @@ export default {
         'google_marker': `Google map marker attributes`,
         'google_map_location': `Google map marker location attribute`,
         'google_map_title': `Google map marker title attribute`,
+        'sidebar_id': `defines the id of the sidebar opened for small screens`,
+        'root_page': `the name of the page which children will be rendered. By default it is the home page`,
+        'submenu': `renders the given pages as a dropdown. Usage: submenu="page1,page2"`,
+        'menu_template': `defines the template to render. It renders the base menu when the property is not defined`,
+        'menu_alignment': 'Sets the menu alignment. This parameter accepts the following values: left, center, right',
+        'menu_extra_item': `
+  An arbitrary menu link not included in the processed page can be rendered, adding a m-menu-item shortcode:
+
+    [m-menu-item position="before" url="#" menu="Label"][/m-menu-item]
+
+  position: the menu position. This property accepts the "before,after" values and "after" is the default value used when the property is empty
+  url: the url to render
+  menu: the menu label`,
     }
 }
