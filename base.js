@@ -1,5 +1,21 @@
 'use babel';
 
+/**
+  This file is part of "Centre" Gravitom package developed by GravCMS Pro and
+  it is distributed under a proprietary license, summarized down below.
+
+    - License expires each year and must be renewed paying a fee
+    - Commercial use allowed
+    - Backlink to Grav CMS Pro website is not required
+    - Can modify source-code but cannot distribute modifications (derivative works)
+
+  The full license is distributed with this package. If you do not receive your
+  license copy, write to info@gravcmspro.com. To use this software you must agree
+  with this license.
+
+  Copyright (c) Grav CMS Pro - All rights reserved
+*/
+
 export default {
     'errors': {
         'yaml_malformed': `Looks like the yaml in page header is malformed. The parser reports this error:\n\n{0}.\n\n` + `To fix this issue, be sure special characters {}[],&*#?|-<>=!%@ are escaped and indentation is correct.`,
@@ -125,5 +141,40 @@ export default {
   position: the menu position. This property accepts the "before,after" values and "after" is the default value used when the property is empty
   url: the url to render
   menu: the menu label`,
+        'navbar_transparent': `renders the navbar transparent for the given menu pages, comma separated or for the whole pages, when the "all" param is given. Usage navbar-transparent="all" or transparent="menu page1,menu page2,menu page3"`,
+        'navbar_brand_url': `Defines the brand element url. When empty link to website homepage`,
+        'navbar_brand_link_attributes': `adds html attributes to brand link. Example attributes="class: foo, rel=bar"`,
+        'navbar_brand_image': `defines the brand image`,
+        'navbar_brand_image_attributes': `adds html attributes to element. Example attributes="class: foo, rel=bar". This property works only when brand_image property is defined`,
+        'navbar_brand_image_path': `defines the brand image path`,
+        'navbar_brand_name': `defines the brand as a text`,
+        'navbar_brand_icon': `defines an icon placed an the left of the brand`,
+        'navbar_brand_align': `defines the brand alignment. It accepts the left, center or right values`,
+        'navbar_items': `
+  By default the navbar shortcode just requires the m-menu shortcode to render the site navigation menu. Optionally, it accepts the m-navbar-item, to render complex navbars. See components section to
+
+  Here it is an example:
+  [m-navbar-item attributes="class:navbar-top-content"]
+    [m-grid container="false"]
+      [m-grid-row]
+        [m-grid-col attributes="class:s12 m6 l6"]
+          Call us today: 555.555.555555 | info@yourdomain.com
+        [/m-grid-col]
+        [m-grid-col attributes="class:s12 m6 l6 right-align"]
+          [m-tag tag="ul" attributes="class:right padding-left-small"]
+            [m-tag tag="li"][m-icon icon="fa-facebook-official"][/m-icon][/m-tag]
+            [m-tag tag="li"][m-icon icon="fa-twitter"][/m-icon][/m-tag]
+            [m-tag tag="li"][m-icon icon="fa-google-plus"][/m-icon][/m-tag]
+          [/m-tag]
+        [/m-grid-col]
+      [/m-grid-row]
+    [/m-grid]
+  [/m-navbar-item]
+
+  [m-navbar-item type="menu"]
+    [m-menu name="menu0" template="menu/menu" alignment="right" sidebar-id="nav-mobile" submenu="centre,documentation"][/m-menu]
+  [/m-navbar-item]
+
+  Do not forget to specify the type="menu" property for the item that handles the navigation menu`
     }
 }
