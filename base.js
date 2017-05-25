@@ -141,6 +141,7 @@ export default {
   position: the menu position. This property accepts the "before,after" values and "after" is the default value used when the property is empty
   url: the url to render
   menu: the menu label`,
+        'navbar_fixed': `Displays the navbar fixed on top of the page when true.`,
         'navbar_transparent': `renders the navbar transparent for the given menu pages, comma separated or for the whole pages, when the "all" param is given. Usage navbar-transparent="all" or transparent="menu page1,menu page2,menu page3"`,
         'navbar_brand_url': `Defines the brand element url. When empty link to website homepage`,
         'navbar_brand_link_attributes': `adds html attributes to brand link. Example attributes="class: foo, rel=bar"`,
